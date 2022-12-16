@@ -58,11 +58,6 @@ export default {
   name: "App",
   data() {
     return {
-      gameEnd: false,
-      incomePlayFor: "X",
-      scoreInfo: "",
-      scoreX: 0,
-      scoreO: 0,
       slot1: "",
       slot2: "",
       slot3: "",
@@ -72,6 +67,11 @@ export default {
       slot7: "",
       slot8: "",
       slot9: "",
+      scoreInfo: "",
+      gameEnd: false,
+      incomePlayFor: "X",
+      scoreX: window.localStorage.getItem("scoreX") || 0,
+      scoreO: window.localStorage.getItem("scoreO") || 0,
     };
   },
   methods: {
@@ -138,7 +138,14 @@ export default {
 
       if (isWinner) {
         this.$data.gameEnd = true;
-        this.$data["score" + incomePlayFor] += 1;
+
+        const playerScore = "score" + incomePlayFor;
+
+        window.localStorage.setItem(
+          playerScore,
+          (this.$data[playerScore] += 1)
+        );
+
         this.$data.scoreInfo = `[ ${incomePlayFor} ] Is Win`;
         return;
       }
