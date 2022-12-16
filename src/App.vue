@@ -96,13 +96,17 @@ export default {
       const currentSlot = "slot" + slotNumber;
       const incomePlayFor = this.$data.incomePlayFor;
 
+      // If Not Empty Don`t Overwrite It
       if (this.$data[currentSlot] !== "") {
         return this.$data[currentSlot];
       }
 
+      // O
       if (incomePlayFor === "X") {
         this.$data.incomePlayFor = "O";
-      } else {
+      }
+      // X
+      else {
         this.$data.incomePlayFor = "X";
       }
 
@@ -143,7 +147,7 @@ export default {
 
         window.localStorage.setItem(
           playerScore,
-          (this.$data[playerScore] += 1)
+          (this.$data[playerScore] = +this.$data[playerScore] + 1)
         );
 
         this.$data.scoreInfo = `[ ${incomePlayFor} ] Is Win`;
@@ -157,6 +161,7 @@ export default {
           this.resetGame();
         }, 2000);
       }
+
     },
   },
 };
