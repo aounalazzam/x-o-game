@@ -1,3 +1,6 @@
+<!--
+  This Source Code Is Written By Aoun Alazzam Under MIT License
+-->
 <template>
   <div class="score-container">
     <div class="score-panel">
@@ -161,7 +164,6 @@ export default {
           this.resetGame();
         }, 2000);
       }
-
     },
   },
 };
