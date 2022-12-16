@@ -259,4 +259,25 @@ button {
   border-radius: 5px;
   background-color: black;
 }
+
+@media (max-width: 420px) {
+  .game-container {
+    width: 350px;
+    height: 350px;
+  }
+
+  .slot {
+    width: 116px;
+    height: 116px;
+  }
+
+  .slot h1 {
+    margin: auto;
+    font-size: 75px;
+  }
+
+  .score-panel h1 {
+    font-size: 28px;
+  }
+}
 </style>
