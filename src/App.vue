@@ -204,6 +204,7 @@ export default {
 .score-panel {
   width: 100%;
   display: flex;
+  margin-top: 10px;
   align-items: center;
   justify-content: space-around;
 }
@@ -212,6 +213,7 @@ export default {
   width: 100%;
   display: flex;
   padding: 25px 0;
+  margin-top: 10px;
 }
 
 .score-info h1 {
