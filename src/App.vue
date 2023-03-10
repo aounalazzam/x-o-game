@@ -269,7 +269,7 @@ button {
   background-color: black;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 576px) {
   .game-container {
     width: 350px;
     height: 350px;
